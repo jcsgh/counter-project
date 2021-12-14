@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: azure;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   text-align: center;
+}
+
+button:hover {
+    background-color:skyblue;
+}
+
+body {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: 2em;
+
+  padding: 2em;
+
+  height: 900px;
+  width: 50%;
+
+  border: 4px solid black;
+
+}
+
+

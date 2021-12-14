@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calcstyles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <section>
+        
+        <h1>Calculator</h1>
+        <br>
+        <div id="total">0</div>
+        <button id="add1">+1</button>
+        <button id="subtract1">-1</button>
+        <button id="mult-2">x2</button>
+        <button id="div-2">/2</button>
+        <button id="mult-5">x5</button>
+        <button id="div-5">/5</button>
+        <button id="clear">clear</button>
+    </section>
+
+    <script>
+        // Select Total / Create Variables
+        let total = document.getElementById('total');
+        let count = 0;
+        // Create Six Functions
+        function add1(){
+            count++
+            update();
+        }
+
+        function subtract1(){
+            count--
+            update();
+        }
+
+        function mult2(){
+            count *= 2
+            update();
+        }
+        
+        function mult5(){
+            count *= 5
+            update();
+        }
+
+        function div2(){
+            count /= 2
+            update();
+        }
+
+        function div5(){
+            count /= 5
+            update();
+        }
+
+        function clear() {
+            count = 0;
+            update();
+        }
+
+        function update() {
+            total.textContent = count;
+        }
+
+        // Attach Functions to Buttons
+        document.getElementById('add1').onclick = add1;
+        document.getElementById('subtract1').onclick = subtract1;
+        document.getElementById('mult-2').onclick = mult2;
+        document.getElementById('div-2').onclick = div2;
+        document.getElementById('mult-5').onclick = mult5;
+        document.getElementById('div-5').onclick = div5;
+        document.getElementById('clear').onclick = clear;
+    </script>
+</body>
+</html>
