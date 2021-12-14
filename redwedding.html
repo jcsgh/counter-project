@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="starks">Stark Family</div>
+    <button id="add-child">ADD CHILD</button>
+    <button id="red-wedding">REMOVE CHILD</button>
+</body>
+<script>
+// Create new element stark-child
+const parent = document.getElementById('starks')
+// Create Two Functions - add-child & red-wedding
+function addChild(){
+    const child = document.createElement('div')
+    child.textContent = "TEXT"
+    parent.appendChild(child)
+}
+function redWedding(){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild)
+    }
+}
+// Attach functions to buttons
+document.getElementById('add-child').onclick = addChild;
+// Add Child creates new div & appends it to the starks parent
+document.getElementById('red-wedding').onclick = redWedding;
+// Red Wedding removes ALL stark children (while loop)
+</script>
+</html>
