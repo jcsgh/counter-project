@@ -210,10 +210,8 @@ returnConsonants = (str) => {
 
     for(let i = 0; i < strArr.length; i++) {
 
-      if(strArr[i] === vowels[j]) {
-        console.log("vowel")
-      } else {
-        console.log(strArr[i])
+      if (strArr[i] !== vowels[j]) {
+        console.log(strArr[i]);
       }
 
     }
