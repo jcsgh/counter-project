@@ -210,16 +210,15 @@ returnConsonants = (str) => {
 
     for(let i = 0; i < strArr.length; i++) {
 
-      if (strArr[i] !== vowels[j]) {
+      if (vowels.includes(strArr[i])) {
+        continue
+      } else {
         console.log(strArr[i]);
       }
 
     }
   
 };
-
-
-
 
 returnConsonants("quick")
 
