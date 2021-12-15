@@ -101,47 +101,131 @@ reverseString("hello")
 /*
 7. Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 */
-// let wordArr = ["Joshua", "Jane", "Jo", "Justin"]
-// findLongestWord = (arr) => {
-//   // ADD YOUR CODE 
-//   let arrToString = arr.toString();
-//   let longestWord = 0;
-//   for(let i = 0; i < arrToString.length; i++){
-//     if(arrToString[i].length > longestWord){
-// 	longestWord = arrToString[i];
-//      }
-//   }
-//   console.log(longestWord.length)
-//   return longestWord;
-// };
+let wordArr = ["Jane", "Jo", "jahsdfihasdifh"]
+findLongestWord = (arr) => {
+  // ADD YOUR CODE 
+  let Long = "";
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].length > Long.length){
+	    Long = arr[i];
+     }
+     
+  }
+  console.log(Long.length)
+};
 
-// findLongestWord(wordArr)
+findLongestWord(wordArr)
 
 /*
 8. Write a function filterLongWords that takes an array of words and a number i and returns the array of words that are longer than i characters long.
 */
-// arrNames = ["Joshua", "Jane", "Jo", "Justin"]
-// let longWordsArr = []
-// let i = 0;
-// filterLongWords = (arr, i) => {
-//   // ADD YOUR CODE HERE
-//    for (let j = 0; j < arr.length; j++) {
-//       if (arr[j] > i) {
-//         longWordsArr.push(arr[j])
-//       } else {
-//           continue
-//       }
-//       console.log(longWordsArr)
-//   }
-// };
+arrNames = ["Joshua", "Jane", "Jo", "Justin"]
 
-// filterLongWords(arrNames, 4)
-// console.log(i)
+filterLongWords = (arr, i) => {
+  // ADD YOUR CODE HERE
+  let long = []
+   for (let j = 0; j < arr.length; j++) {
+      if (arr[j].length > i) {
+        long.push(arr[j])
+      } else {
+          continue
+      }
+      console.log(long)
+  }
+};
 
-// let arrToString = wordArr.toString();
-// let strSplit = arrToString.split('');
-// console.log(arrToString)
-// console.log(strSplit)
+filterLongWords(arrNames, 1)
+
+
+// Write a function that checks that a given number falls 
+// within a given range, return a boolean
+
+function range(num, rangeStart, rangeEnd) {
+  if (num >= rangeStart && num <= rangeEnd) {
+    console.log(true);
+  } else {
+    console.log(false)
+  }
+} 
+
+range(1, 2, 5)
+
+// Write a function to check if the input is a string, return a boolean
+
+function ifString(val) {
+  if (typeof val === "string") {
+    console.log(true)
+  } else {
+    console.log(false)
+  }
+}
+
+ifString(1)
+
+// Write a function that returns an array of data stored only at the even indexes of the given array
+
+let randArr = [0, 1, 2, 3, 4, 5]
+function evenIndexes(arr) {
+  let evenIndexArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+	    evenIndexArr.push(arr[i])
+     }
+  }
+  console.log(evenIndexArr)
+}
+
+evenIndexes(randArr)
+
+// Write a function that multiples the data stored in the array by 5.
+// If that new value is even, replace the stored value with a zero, otherwise
+// replace the stored value with a one. Return the modified array.
+
+randArr = [0, 1, 2, 3, 4, 5]
+
+function returnBinary(arr) {
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+	    arr[i] = 0;
+     } else {
+      arr[i] = 1;
+     }
+  }
+  console.log(arr)
+}
+
+returnBinary(randArr)
+
+/* 
+
+Write a function that takes a string, and returns ONLY THE CONSONANTS
+in that string
+
+*/
+
+vowels = ['a', 'e', 'i', 'o', 'u'];
+returnConsonants = (str) => {
+  // ADD YOUR CODE HERE
+  let strArr = str.split('');
+
+    for(let i = 0; i < strArr.length; i++) {
+
+      if(strArr[i] === vowels[j]) {
+        console.log("vowel")
+      } else {
+        console.log(strArr[i])
+      }
+
+    }
+  
+};
+
+
+
+
+returnConsonants("quick")
+
+
 
 
 
