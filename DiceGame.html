@@ -20,22 +20,26 @@
         otherwise, display "COMPUTER WINS"
         */
 
-        function rollDice() {
-            let playerDie = Math.floor(Math.random()*6)+1;
-            let computerDie = Math.floor(Math.random()*6)+1;
+        const winner = document.getElementById('winner');
+        const game = document.getElementById('play-game');
+        const resetBtn = document.getElementById('reset');
 
-            if(playerDie > computerDie) {
-                alert("Player rolls a " + playerDie + " and the computer rolls a " + computerDie + ". PLAYER WINS!");
-            } else if (computerDie > playerDie) {
-                alert("Player rolls a " + playerDie + " and the computer rolls a " + computerDie + ". COMPUTER WINS!");
+        function rollDice() {
+            let playerRoll = Math.floor(Math.random()*6)+1;
+            let computerRoll = Math.floor(Math.random()*6)+1;
+
+            if playerRoll > computerRoll) {
+                alert("Player rolls a " + playerRoll + " and the computer rolls a " + computerRoll + ". PLAYER WINS!");
+            } else if (computerRoll > playerRoll) {
+                alert("Player rolls a " + playerRoll + " and the computer rolls a " + computerRoll + ". COMPUTER WINS!");
             } else {
-                alert("Player rolls a " + playerDie + " and the computer rolls a " + computerDie + ". IT IS A TIE!");
+                alert("Player rolls a " + playerRoll + " and the computer rolls a " + computerRoll + ". IT IS A TIE!");
             }
         }
 
         function reset() {
-            let playerDie = 0;
-            let computerDie = 0;
+            let playerRoll = 0;
+            let computerRoll = 0;
             alert("Reset")
         }
 
